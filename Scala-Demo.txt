@@ -1,0 +1,39 @@
+1. HelloWorld
+1.1 Create Intellij Idea project
+object - singleton object, class with single instance
+
+object HelloWorld {
+  def main(args: Array[String]) {
+    println("Hello, world!")
+  }
+}
+
+The declaration above thus declares both a class called HelloWorld and an instance of that class, also called HelloWorld. 
+This instance is created on demand, the first time it is used.
+This is because static members (methods or fields) do not exist in Scala.
+
+The astute reader might have noticed that the main method is not declared as static here. This is because static members (methods or fields) do not exist in Scala.
+Rather than defining static members, the Scala programmer declares these members in singleton objects.
+
+1.2. Run example in Intellij Idea and cmd line
+
+Compile:
+scalac HelloWorld.scala
+
+Run: 
+scala -classpath . HelloWorld
+
+3. Interaction with Java - FrenchDate
+
+3.1 import selected classes from package
+import java.util.{Date, Locale}
+
+3.2 import as static members (LONG, getDateInstance)
+import java.text.DateFormat._
+
+scala expression less verbose
+println(df format now)
+println(df.format(now))
+
+
+
